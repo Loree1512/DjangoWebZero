@@ -1,0 +1,17 @@
+{% extends "webzeroapp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+{% for artista in artistas %}
+
+    <div>
+        <h2 style ="color: white">{{articulo.nombre}}</h2>
+        <p style ="color: white">{{articulo.descripcion}}</p>
+        <p><img src="{{articulo.foto.url}}" ></p>
+    </div>
+
+    {% endfor %}
+
+{% endblock %}

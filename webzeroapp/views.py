@@ -12,9 +12,7 @@ def tienda(request):
 
     return render(request, "webzeroapp/tienda.html")
 
-def blog(request):
 
-    return render(request, "webzeroapp/blog.html")
 
 def contacto(request):
 
