@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'artistas',
     'catalogo',
     'contacto',
+    'carro',
 ]
 
 MIDDLEWARE = [
