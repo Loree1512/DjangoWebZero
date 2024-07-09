@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from artistas.models import Artista
+
 
 # Create your views here.
 
@@ -7,11 +7,6 @@ def home(request):
 
     return render(request, "webzeroapp/home.html")
 
-
-def artistas(request):
-    artistas = Artista.objects.all()
-
-    return render(request, "webzeroapp/artistas.html",{"artistas":artistas}) 
 
 def tienda(request):
 
