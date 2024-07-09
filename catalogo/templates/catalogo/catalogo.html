@@ -3,16 +3,19 @@
 {% load static %}
 
 {% block content %}
+<div class = "row">
 
 {% for articulo in articulos %}
+<div class = "col md-3">
+    <div class="card" style="width: 18rem;">
+        <img src="{{articulo.foto.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{articulo.nombre}}</h5>
+        <p class="card-text">{{articulo.descripcion}}</p>
+        <p class="card-text">{{articulo.precio}}&nbsp;CLP</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
 
-<div class="card" style="width: 18rem;">
-    <img src="{{articulo.foto.url}}" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">{{articulo.nombre}}</h5>
-      <p class="card-text">{{articulo.descripcion}}</p>
-      <p class="card-text">{{articulo.precio}}</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
 </div>
 
@@ -20,5 +23,6 @@
     
 
 {% endfor %}
+</div>
 
 {% endblock %}
