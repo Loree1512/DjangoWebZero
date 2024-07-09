@@ -4,14 +4,21 @@
 
 {% block content %}
 
-{% for artista in artistas %}
+{% for articulo in articulos %}
 
-    <div>
-        <h2 style ="color: white">{{articulo.nombre}}</h2>
-        <p style ="color: white">{{articulo.descripcion}}</p>
-        <p><img src="{{articulo.foto.url}}" ></p>
+<div class="card" style="width: 18rem;">
+    <img src="{{articulo.foto.url}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{articulo.nombre}}</h5>
+      <p class="card-text">{{articulo.descripcion}}</p>
+      <p class="card-text">{{articulo.precio}}</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
+</div>
 
-    {% endfor %}
+    
+    
+
+{% endfor %}
 
 {% endblock %}
