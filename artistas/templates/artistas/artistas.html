@@ -9,9 +9,13 @@
     {% for artista in artistas %}
 
     <div>
-        <h2 style ="color: white">{{artista.nombre}}</h2>
-        <p style ="color: white">{{artista.aPaterno}}</p>
-        <p><img src="{{artista.foto.url}}" ></p>
+        <div class="card" style="width: 18rem;">
+            <img src="{{artista.foto.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">{{artista.nombre}} {{artista.aPaterno}}</p>
+            </div>
+          </div>
+        
     </div>
 
     {% endfor %}
