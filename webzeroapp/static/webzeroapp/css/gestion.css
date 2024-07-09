@@ -287,3 +287,31 @@ ul.errorlist{
   
 
 }
+
+/* styles.css HOME */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container_img_pb1 {
+  display: flex;
+  justify-content: space-around; /* Distribuir espacio uniformemente */
+  align-items: center; /* Alinear elementos verticalmente al centro */
+  padding: 20px;
+  /* background-color: hsl(0, 0%, 94%); */
+}
+
+.item_pb {
+  text-align: center;
+  margin: 10px;
+}
+
+.item_pb img {
+  max-width: 400px; /* Ajusta el tamaño de las imágenes según sea necesario */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
