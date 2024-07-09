@@ -4,8 +4,14 @@
 
     {% load static %}
 
-    <!-- Bootstrap -->
-    <link href="{% static 'webzeroapp/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  
+     <!-- Cargando Bootstrap CSS y JS (de bootstrap) -->
+
+    {% load bootstrap5 %}
+
+    {% bootstrap_css %}
+
+    {% bootstrap_javascript %}
 
      <!-- Fonts -->
     
@@ -61,9 +67,7 @@
   </footer>
   
 
-    <!-- Bootstrap -->
-    <script src="{% static 'webzeroapp/vendor/jquery/jquery.min.js' %}"></script>
-    <script src="{% static 'webzeroapp/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  
 
 </body>
 
