@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'webzeroapp',
     'artistas',
     'catalogo',
+    'contacto',
 ]
 
 MIDDLEWARE = [
