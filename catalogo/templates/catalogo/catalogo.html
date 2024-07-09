@@ -3,26 +3,31 @@
 {% load static %}
 
 {% block content %}
-<div class = "row">
-
-{% for articulo in articulos %}
-<div class = "col md-3">
-    <div class="card" style="width: 18rem;">
-        <img src="{{articulo.foto.url}}" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">{{articulo.nombre}}</h5>
-        <p class="card-text">{{articulo.descripcion}}</p>
-        <p class="card-text">{{articulo.precio}}&nbsp;CLP</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-
+<div class="container">
+    <div style="float:right ;">
+        <p style="color: white;"> Total: {{importe_total_carro}} CLP</p>
     </div>
-</div>
+    <div class = "row">
 
-    
-    
+    {% for articulo in articulos %}
+    <div class = "col md-3">
+        <div class="card" style="width: 18rem;">
+            <img src="{{articulo.foto.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{articulo.nombre}}</h5>
+            <p class="card-text">{{articulo.descripcion}}</p>
+            <p class="card-text">{{articulo.precio}}&nbsp;CLP</p>
+            <a href="#" class="btn btn-primary">Agregar al carro</a>
+            </div>
 
-{% endfor %}
+        </div>
+    </div>
+
+        
+        
+
+    {% endfor %}
+    </div>
 </div>
 
 {% endblock %}
