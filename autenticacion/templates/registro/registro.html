@@ -11,15 +11,39 @@
 
 
 {% block content %}
-
-<form method="post" action="" style = "color: white;">
-    {% csrf_token %}
-    
-    <div style="width: 75%; margin: auto; text-align: center;" ></div>
-        {{form}}
-        <button type="submit" class="btn btn-primary">Regístrate</button>
+<div class="container mt-5" style="padding-bottom: 15%;">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card" style="background-color: #333; color: white;">
+                <div class="card-header text-center" style="background-color: #555; color: white;">
+                    <h4>Registro</h4>
+                </div>
+                <div class="card-body">
+                    <form method="post" action="">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            <div class="mb-3">
+                                <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+                                {{ field }}
+                                {% if field.help_text %}
+                                    <div class="form-text" style="color: #ccc;">{{ field.help_text }}</div>
+                                {% endif %}
+                                {% if field.errors %}
+                                    <div class="text-danger">
+                                        {% for error in field.errors %}
+                                            <div>{{ error }}</div>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        {% endfor %}
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-secondary" style="background-color: #555; border: none;">Regístrate</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-</form>
-    
-
+</div>
 {% endblock %}
