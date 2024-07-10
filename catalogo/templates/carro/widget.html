@@ -21,9 +21,10 @@
                         {% if value.articulo_id %}
                             <a href="{% url 'carro:agregar' value.articulo_id %}" class="btn btn-sm btn-success">+</a>
                             <a href="{% url 'carro:restar' value.articulo_id %}" class="btn btn-sm btn-success">-</a><br>
-                        {% endif %}
                         
-                        {{value.articulo.precio}} CLP
+
+                            {{value.precio}} CLP
+                        {% endif %}
                     </td>
 
 
