@@ -17,8 +17,8 @@
 <br>
 <br>
 
-<div class="contenedorFormulario">
-
+<div class="contenedorFormulario" style="display: flex; justify-content: center; gap: 20px; padding-bottom: 1%;">
+    
     {% if  "valido" in request.GET %}
 
     <p style = "color: white;">Mensaje enviado correctamente</p>
@@ -29,5 +29,25 @@
         <table style="color: white; margin: 20px auto;">{{miformulario.as_table}}</table>
         <input type="submit" value="Enviar" class="btn btn-primary">
     </form>
+    </div>
 </div>
+
+<!-- Contenedor para el mapa -->
+<div id="map" style="height: 300px; width: 100%; margin-top: 30px;"></div>
+
+<script>
+    function initMap() {
+        var location = {lat: -33.015348, lng: -71.550746}; // Coordenadas de ejemplo
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 10,
+            center: location
+        });
+        var marker = new google.maps.Marker({
+            position: location,
+            map: map
+        });
+    }
+    </script>
+    
+
 {% endblock %}
