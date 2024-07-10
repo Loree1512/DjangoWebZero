@@ -3,21 +3,22 @@
 {% extends "webzeroapp/base.html" %}
 
 {% load static %}
-
 {% block content %}
 
-    {% for artista in artistas %}
-
-    <div>
-        <div class="card" style="width: 18rem;">
-            <img src="{{artista.foto.url}}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">{{artista.nombre}} {{artista.aPaterno}}</p>
+<div class="container mt-4">
+    <div class="row">
+        {% for artista in artistas %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="{{artista.foto.url}}" class="card-img-top" alt="{{artista.nombre}}">
+                <div class="card-body">
+                    <h3 class="card-title"><b>{{artista.nombre}} {{artista.aPaterno}}</b></h3>
+                    <p class="card-text" style="text-align: center;"> biografía del artista puede ir aqui</p>
+                </div>
             </div>
-          </div>
-        
+        </div>
+        {% endfor %}
     </div>
-
-    {% endfor %}
+</div>
 
 {% endblock %}

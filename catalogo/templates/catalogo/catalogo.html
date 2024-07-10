@@ -3,14 +3,21 @@
 {% load static %}
 
 {% block content %}
+<<<<<<< HEAD
 <div class="container">
     <div style="float:right ;">
         
 
         {% include "carro/widget.html" %}
+=======
+<div class="container mt-4">
+    <div class="d-flex justify-content-end mb-3">
+        <p class="text-white">Total: {{importe_total_carro}} CLP</p>
+>>>>>>> f2c5347e285dd1de6a7fc73f49dacde99761cdb9
     </div>
-    <div class = "row">
+    <div class="row">
 
+<<<<<<< HEAD
     {% for articulo in articulos %}
     <div class = "col md-3">
         <div class="card" style="width: 18rem;">
@@ -20,16 +27,22 @@
             <p class="card-text">{{articulo.descripcion}}</p>
             <p class="card-text">{{articulo.precio}}&nbsp;CLP</p>
             <a href="{% url 'carro:agregar' articulo.id %}" class="btn btn-primary">Agregar al carro</a>
+=======
+        {% for articulo in articulos %}
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <img src="{{articulo.foto.url}}" class="card-img-top" alt="{{articulo.nombre}}">
+                <div class="card-body d-flex flex-column">
+                    <h3 class="card-title"><b>{{articulo.nombre}}</b></h3>
+                    <p class="card-text">{{articulo.descripcion}}</p>
+                    <p class="card-text">{{articulo.precio}}&nbsp;CLP</p>
+                    <a href="#" class="btn btn-primary mt-auto">Agregar al carro</a>
+                </div>
+>>>>>>> f2c5347e285dd1de6a7fc73f49dacde99761cdb9
             </div>
-
         </div>
-    </div>
-
+        {% endfor %}
         
-        
-
-    {% endfor %}
     </div>
 </div>
-
 {% endblock %}
