@@ -37,31 +37,40 @@
 <p></p>
 <p></p>
 </div>
-
-<div style="align-self: auto; ">
-  <div class="container_img_pb1">
-    <div class="item_pb">
-        <img src="{% static 'webzeroapp/img/acuarela_arte.jpg' %}" alt="Imagen 1">
-        <h4 style="background-color: aliceblue;">Acuarela</h4>
-        <br>
-        <p style="color: aliceblue;">Descripción </p>
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <img src="{% static 'webzeroapp/img/acuarela_arte.jpg' %}" class="card-img-top" alt="Imagen 1">
+            <div class="card-body">
+                <h4 class="card-title" style="background-color: aliceblue;">Acuarela</h4>
+                <p class="card-text" style="color: aliceblue;">Descripción</p>
+            </div>
+        </div>
     </div>
-    <div class="item_pb">
-        <img src="{% static 'webzeroapp/img/wcolor1.jpg' %}" alt="Imagen 2">
-        <h4 style="background-color: aliceblue;">Acuarela</h4>
-        <br>
-        <p style="color: aliceblue;">Descripción </p>
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <img src="{% static 'webzeroapp/img/wcolor1.jpg' %}" class="card-img-top" alt="Imagen 2">
+            <div class="card-body">
+                <h4 class="card-title" style="background-color: aliceblue;">Acuarela</h4>
+                <p class="card-text" style="color: aliceblue;">Descripción</p>
+            </div>
+        </div>
     </div>
-    <div class="item_pb">
-        <img src="{% static 'webzeroapp/img/barcoacua.jpg' %}" alt="Imagen 3">
-        <h4 style="background-color: aliceblue;">Acuarela</h4>
-        <br>
-        <p style="color: aliceblue;">Descripción </p>
-    </div>  
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <img src="{% static 'webzeroapp/img/barcoacua.jpg' %}" class="card-img-top" alt="Imagen 3">
+            <div class="card-body">
+                <h4 class="card-title" style="background-color: aliceblue;">Acuarela</h4>
+                <p class="card-text" style="color: aliceblue;">Descripción</p>
+            </div>
+        </div>
+    </div>
   </div>
   
-  <div style="padding-left: 46%; color: antiquewhite;"><button>Ver más</button> 
-    <div><br></div></div>
+  <div class="d-flex justify-content-center mt-4">
+    <button class="btn btn-primary">Ver más</button>
+  </div>
 </div>
   
     <!-- Message -->
