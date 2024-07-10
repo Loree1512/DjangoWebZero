@@ -22,5 +22,6 @@ urlpatterns = [
     path('catalogo/', include('catalogo.urls')),
     path('contacto/', include('contacto.urls')),
     path('carro/', include('carro.urls')),
+    path('autenticacion/', include('autenticacion.urls')),
     path('', include('webzeroapp.urls')),
 ]
