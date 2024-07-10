@@ -9,7 +9,7 @@ class Carro:
 
     def agregar(self, articulo):
         if (str(articulo.id) not in self.carro.keys()):
-            self.carro[articulo.id] = {
+            self.carro[str(articulo.id)] = {
                 "articulo_id": articulo.id,
                 "nombre": articulo.nombre,
                 "precio": str(articulo.precio),
@@ -31,7 +31,7 @@ class Carro:
     
     def eliminar(self, articulo):
         if str(articulo.id) in self.carro:   
-            del self.carro[articulo.id]
+            del self.carro[str(articulo.id)]
             self.guardar_carro()
     
     def restar_articulo(self,articulo):
