@@ -21,5 +21,6 @@ urlpatterns = [
     path('artistas/', include('artistas.urls')),
     path('catalogo/', include('catalogo.urls')),
     path('contacto/', include('contacto.urls')),
+    path('carro/', include('carro.urls')),
     path('', include('webzeroapp.urls')),
 ]

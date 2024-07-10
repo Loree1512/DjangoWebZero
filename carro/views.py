@@ -9,21 +9,21 @@ def agregar_articulo(request,articulo_id):
     carro=Carro(request)
     articulo=Articulo.objects.get(id=articulo_id)
     carro.agregar(articulo=articulo)
-    return redirect ("catalogo")
+    return redirect ("Catalogo")
 
 def eliminar_articulo(request,articulo_id):
     carro=Carro(request)
     articulo=Articulo.objects.get(id=articulo_id)
     carro.eliminar(articulo=articulo)
-    return redirect ("catalogo")
+    return redirect ("Catalogo")
 
 def restar_articulo(request,articulo_id):
     carro=Carro(request)
     articulo=Articulo.objects.get(id=articulo_id)
     carro.restar_articulo(articulo=articulo)
-    return redirect ("catalogo")
+    return redirect ("Catalogo")
 
 def limpiar_carro(request, articulo_id):
     carro = Carro(request)
     carro.limpiar_carro()
-    return redirect ("catalogo")
+    return redirect ("Catalogo")
