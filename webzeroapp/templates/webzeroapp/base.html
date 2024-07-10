@@ -57,7 +57,7 @@
       Hola!, {{ user.username }}&nbsp;&nbsp;<a href="{% url 'cerrar_sesion' %}"style="color:  #333;">Cerrar sesion</a>
 
       {% else %}
-      <a href="#"style="color:  #333;">Log in</a>&nbsp;&nbsp;<a href="{% url 'Autenticacion' %}"style="color:  #333;">Registrate</a>
+      <a href="{% url 'logear' %}"style="color:  #333;">Log in</a>&nbsp;&nbsp;<a href="{% url 'Autenticacion' %}"style="color:  #333;">Registrate</a>
       {% endif %}
     </div>
   </div>
