@@ -1,5 +1,6 @@
 def importe_total_carro(request):
-    total = 0
-    for key, value in request.session["carro"].items():
-        total += float(value['precio'] )
+    if 'carro' not in request.session:
+        request.session['carro'] = {}
+
+    total = sum(value['precio'] * value['cantidad'] for value in request.session['carro'].values())
     return {'importe_total_carro': total}
